@@ -21,15 +21,17 @@ export default function Home({ allPostsData }) {
       <section className={utilStyles.headingMd}>
         <p>Here is Gray Jiang,I'm learning next.js now~~</p>
         <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              {title}
-              <br />
-              {id}
-              <br />
-              {date}
-            </li>
-          ))}
+          {allPostsData
+            .filter((item) => item.id === "pre-rendering")
+            .map(({ id, date, title }) => (
+              <li className={utilStyles.listItem} key={id}>
+                {title}
+                <br />
+                {id}
+                <br />
+                {date}
+              </li>
+            ))}
         </ul>
       </section>
     </Layout>

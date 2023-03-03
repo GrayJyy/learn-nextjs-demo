@@ -5,6 +5,7 @@ import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
 const name = "Gray Jiang";
+const name2 = "Cassiel Zhao";
 export const siteTitle = "Next.js Sample Website";
 
 export default function Layout({ children, home }) {
@@ -36,7 +37,7 @@ export default function Layout({ children, home }) {
               width={144}
               alt=''
             />
-            <Link href='/posts/first-post' style={{ textDecoration: "none" }}>
+            <Link href='/posts/ssg-ssr' style={{ textDecoration: "none" }}>
               <h1 className={utilStyles.heading2Xl}>{name}</h1>
             </Link>
           </>
@@ -45,7 +46,7 @@ export default function Layout({ children, home }) {
             <Link href='/'>
               <Image
                 priority
-                src='/images/profile.jpeg'
+                src='/images/profile2.png'
                 className={utilStyles.borderCircle}
                 height={108}
                 width={108}
@@ -58,7 +59,7 @@ export default function Layout({ children, home }) {
                 className={utilStyles.colorInherit}
                 style={{ textDecoration: "none" }}
               >
-                {name}
+                {name2}
               </Link>
             </h2>
           </>
